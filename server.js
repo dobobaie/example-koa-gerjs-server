@@ -42,7 +42,7 @@ module.exports = ({ packageInfo, gerJs, logger }) => {
         console.log(ctx.params, ctx.query, ctx.request.fields);
         ctx.body = Object.assign({}, ctx.params, ctx.query, ctx.request.fields);
       })
-      .post("/users", ctx => {
+      .get("/users", ctx => {
         console.log(ctx.params, ctx.query, ctx.request.fields);
         ctx.body = Object.assign({}, ctx.params, ctx.query, ctx.request.fields);
       })

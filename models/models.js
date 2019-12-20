@@ -40,6 +40,8 @@ const models = {
     queries: refs.token,
     response: Joi.array().items(
       Joi.object({
+        test: refs.classic,
+        test2: Joi.array().items(refs.token),
         firstname: Joi.string(),
         lastname: Joi.string()
       })

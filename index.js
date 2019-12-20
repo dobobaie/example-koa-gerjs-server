@@ -20,7 +20,7 @@ const gerJs = require("@gerjs/koa")({
   swagger: {
     title: "Example Koa GerJs Server Swagger",
     description: "In this Swagger document, you can retrieve each route available",
-    servers_url: [ `http://localhost:${config.server_port}/` ]
+    servers_url: [ `http://${config.server_ip}:${config.server_port}/` ]
   },
   exportTo: __dirname + '/doc',
   autoRefresh: true
