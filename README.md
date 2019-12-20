@@ -1,8 +1,8 @@
 # Example [koa-gerjs](https://github.com/dobobaie/koa-gerjs) server
 
-Retrieve in this service, how the package works.  
+Example of koa-getjs in situation | Generate Swagger documentation + validation input + format data output with joi models  
 
-## How use `koa-gerjs` ?  
+## How use `[koa-gerjs](https://github.com/dobobaie/koa-gerjs)` ?  
 
 One instance, one middleware, one expose and models. Simple.  
 Check [`koa-gerjs`](https://github.com/dobobaie/koa-gerjs) instance in [index.js#L19](https://github.com/dobobaie/example-koa-gerjs-server/blob/master/index.js#L19) file  
