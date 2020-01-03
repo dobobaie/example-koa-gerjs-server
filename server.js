@@ -20,16 +20,16 @@ const parseQueryMiddleware = require("./middlewares/parseQuery");
 module.exports = ({ packageInfo, gerJs, logger }) => {
   const app = new Koa();
   
-  app.use(jsonContentTypeMiddleware());
+  app.use(errorsMiddleware({ errors, logger }));
+  app.use(convert(cors()));
+  app.use(convert(koaBody()));
+  app.use(parseQueryMiddleware());
   app.use(responseTimeMiddleware());
   app.use(requestIdMiddleware());
   app.use(requestIpMiddleware());
-  app.use(parseQueryMiddleware());
-  app.use(errorsMiddleware({ errors, logger }));
   app.use(loggerMiddleware({ logger }));
   app.use(timeoutMiddleware(10000));
-  app.use(convert(cors()));
-  app.use(convert(koaBody()));
+  app.use(jsonContentTypeMiddleware());
   app.use(gerJs.middleware(router));
 
   app.use(
