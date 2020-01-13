@@ -16,7 +16,10 @@ const { name, version } = require("./package.json");
 const config = require("./app/config")(process.env);
 
 const modelsAPI = require("./models/models");
-const gerJs = require("@gerjs/koa")({
+const gerjsKoaRequire = (process.env.gerjsKoaRequire
+  ? process.env.gerjsKoaRequire
+  : require("@gerjs/koa"));
+const gerJs = gerjsKoaRequire({
   swagger: {
     title: "Example Koa GerJs Server Swagger",
     description: "In this Swagger document, you can retrieve each route available",
