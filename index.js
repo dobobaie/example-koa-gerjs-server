@@ -16,9 +16,9 @@ const { name, version } = require("./package.json");
 const config = require("./app/config")(process.env);
 
 const modelsAPI = require("./models/models");
-const gerjsKoaRequire = (process.env.gerjsKoaRequire
+const gerjsKoaRequire = require(process.env.gerjsKoaRequire
   ? process.env.gerjsKoaRequire
-  : require("@gerjs/koa"));
+  : "@gerjs/koa");
 const gerJs = gerjsKoaRequire({
   swagger: {
     title: "Example Koa GerJs Server Swagger",
