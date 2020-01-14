@@ -44,7 +44,11 @@ module.exports = ({ packageInfo, gerJs, logger }) => {
       })
       .get("/users", ctx => {
         console.log(ctx.params, ctx.query, ctx.request.fields);
-        ctx.body = Object.assign({}, ctx.params, ctx.query, ctx.request.fields);
+        ctx.body = [{
+          firstname: "Jean",
+          lastname: "Bernard",
+          test2: [ctx.query]
+        }];
       })
       .get("/", ctx => {
         console.log(ctx.params, ctx.query, ctx.request.fields);
