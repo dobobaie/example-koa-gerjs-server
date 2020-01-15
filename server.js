@@ -47,7 +47,8 @@ module.exports = ({ packageInfo, gerJs, logger }) => {
         ctx.body = [{
           firstname: "Jean",
           lastname: "Bernard",
-          test2: [ctx.query]
+          test2: [ctx.query],
+          test: {}
         }];
       })
       .get("/", ctx => {

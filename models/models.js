@@ -8,9 +8,8 @@ const refs = {
   classic:
     Joi.object({
       message: Joi.string().default("request done with success"),
-      result: Joi.boolean().default(true),
-      username: Joi.string()
-    }).label("classic")
+      result: Joi.boolean().default(true)
+    }).label("classic").required()
 };
 
 const models = {
@@ -44,8 +43,8 @@ const models = {
         test2: Joi.array().items(refs.token),
         firstname: Joi.string(),
         lastname: Joi.string()
-      })
-    )
+      }).required()
+    ).required()
   },
   'GET/': {
     response: Joi.string().default('Default reponse')

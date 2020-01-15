@@ -14,4 +14,5 @@ module.exports = {
   validation_error_username_must_be_a_string: "badData",
   validation_error_value_must_be_a_string: "badData",
   validation_error_value_must_be_an_array: "badData",
+  validation_error_0_age_must_be_a_number: "badData",
 };
